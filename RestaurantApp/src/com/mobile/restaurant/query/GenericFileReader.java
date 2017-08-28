@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+import com.mobile.restaurant.constant.ApplicationConstant;
 import com.mobile.restaurant.error.ApplicationErrorInfo;
 import com.mobile.restaurant.exception.ApplicationException;
 
@@ -17,13 +18,14 @@ import com.mobile.restaurant.exception.ApplicationException;
  */
 public abstract class GenericFileReader {
 
-	private String folderPath = "queries";
-	private String fileName = "query.txt";
 	protected String queryTemplate;
 	
+	/**
+	 * 
+	 * @return
+	 */
 	private String getCompleteFilePath() {
-		String pathName = String.format("%s\\%s", folderPath, fileName); 
-		return pathName;
+		return String.format("%s\\%s", ApplicationConstant.FOLDER_PATH, ApplicationConstant.FILENAME);
 	}
 
 	public GenericFileReader() throws ApplicationException {
@@ -38,23 +40,28 @@ public abstract class GenericFileReader {
 	private String readQueryFile() throws ApplicationException {
 		
 		try {
-			final InputStream inputStream = getClass().getResourceAsStream(getCompleteFilePath());
+			final InputStream inputStream = getClass().getClassLoader().getResourceAsStream(getCompleteFilePath());
 			if (null == inputStream) {
-				throw new ApplicationException(ApplicationErrorInfo.NOT_FOUND.getErrorCode(),
-						ApplicationErrorInfo.NOT_FOUND.getErrorMessage());
+				throw new ApplicationException(ApplicationErrorInfo.FILE_NOT_FOUND.getErrorCode(),
+						ApplicationErrorInfo.FILE_NOT_FOUND.getErrorMessage());
 			}
 			Scanner scan = new Scanner(inputStream, "UTF-8").useDelimiter("\\A");
 			queryTemplate = scan.hasNext() ? scan.next() : "";
 
 			if (queryTemplate.isEmpty()) {
-				throw new ApplicationException(ApplicationErrorInfo.NOT_FOUND.getErrorCode(),
-						ApplicationErrorInfo.NOT_FOUND.getErrorMessage());
+				throw new ApplicationException(ApplicationErrorInfo.INTERNAL_ERROR.getErrorCode(),
+						ApplicationErrorInfo.INTERNAL_ERROR.getErrorMessage());
 			}
 		} catch (NoSuchElementException cx) {
-			throw new ApplicationException(ApplicationErrorInfo.NOT_FOUND.getErrorCode(),
-					ApplicationErrorInfo.NOT_FOUND.getErrorMessage());
+			throw new ApplicationException(ApplicationErrorInfo.FILE_NOT_FOUND.getErrorCode(),
+					ApplicationErrorInfo.FILE_NOT_FOUND.getErrorMessage());
 		}
-		return queryTemplate.replaceAll("[\\t\\n\\r]", "\\s");
+		return queryTemplate.replaceAll(ApplicationConstant.REPLACE_SPECIAL_CHARACTER, ApplicationConstant.SPACE);
 	}
+	/**
+	 * 
+	 * @return
+	 * @throws ApplicationException
+	 */
 	public abstract String readQuery() throws ApplicationException;
 }

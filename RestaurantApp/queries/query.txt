@@ -1,5 +1,0 @@
-select r.name, a.street, a.city,a.state, a.country, a.pincode, a.mobile
-from restaurantinformation r join address a 
-on a.aid = r.id
-where r.id in (
-select tid from item where type="$type");

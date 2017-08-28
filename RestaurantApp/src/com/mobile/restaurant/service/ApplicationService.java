@@ -40,7 +40,7 @@ public class ApplicationService {
 		ApplicationResponse appResponse =  new ApplicationResponse();
 		if(null != type && !type.isEmpty()) {
 			try {
-				appResponse = new ApplicationBusiness().getResult("");
+				appResponse = new ApplicationBusiness().getResult(type);
 			} catch (JSONException | ApplicationException | SQLException e) {
 				e.printStackTrace();
 			}
@@ -65,7 +65,7 @@ public class ApplicationService {
 	public Response getResults(@QueryParam("type") String type) {
 		ApplicationResponse appResponse = new ApplicationResponse();
 		try {
-			appResponse = new ApplicationBusiness().getResult("");
+			appResponse = new ApplicationBusiness().getResult(type);
 		} catch (JSONException | ApplicationException | SQLException e) {
 			e.printStackTrace();
 		}

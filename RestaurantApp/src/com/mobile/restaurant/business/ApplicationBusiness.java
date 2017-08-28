@@ -11,6 +11,7 @@ import org.json.JSONException;
 
 import com.mobile.restaurant.database.DBClientImpl;
 import com.mobile.restaurant.exception.ApplicationException;
+import com.mobile.restaurant.query.QueryReader;
 import com.mobile.restaurant.response.ApplicationResponse;
 
 /**
@@ -23,17 +24,10 @@ public class ApplicationBusiness {
 	public ApplicationResponse getResult(final String menuType)
 			throws ApplicationException, JSONException, SQLException {
 
-		//final String query = new QueryReader().readQuery();
+		final String query = new QueryReader(menuType).readQuery();
 
 		ApplicationResponse appResponse = new ApplicationResponse();
-		String query = "select r.name, a.street, a.city,a.state, a.country, a.pincode, a.mobile\r\n" + 
-				"from restaurantinformation r join address a \r\n" + 
-				"on a.aid = r.id\r\n" + 
-				"where r.id in (\r\n" + 
-				"select tid from item where type=\"south indian\");";
-		
 		if (null != query && !query.isEmpty()) {
-			
 			appResponse.restaurants = (null != appResponse.restaurants) ? appResponse.restaurants : new ArrayList<>();
 			appResponse.restaurants = new DBClientImpl().getQueryResult(query);
 		}
