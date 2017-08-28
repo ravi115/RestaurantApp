@@ -19,7 +19,7 @@ public enum ApplicationErrorInfo {
 		this.errorCode = errorCode;
 		this.errorMessage = errorMessage;
 	}
-
+	
 	public int getErrorCode() {
 		return errorCode;
 	}
