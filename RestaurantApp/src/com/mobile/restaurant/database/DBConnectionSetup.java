@@ -22,7 +22,7 @@ public class DBConnectionSetup {
 	private String getDatabaseUrl(final String host, final int port, final String databaseName) {
 		String databaseUrl = "";
 		if (null != host && !host.isEmpty()) {
-			databaseUrl = String.format("%s//%s:%s/%s", ApplicationConstant.DATABASEURL, port, databaseName);
+			databaseUrl = String.format("%s//%s:%s/%s", ApplicationConstant.DATABASEURL, host, port, databaseName);
 		}
 		return databaseUrl;
 	}
@@ -31,7 +31,7 @@ public class DBConnectionSetup {
 	 */
 	private void initConnection() {
 
-		final String userName = dbConfig.getString("db-uername");
+		final String userName = dbConfig.getString("db-username");
 		final String password = dbConfig.getString("db-password");
 		final String databaseName = dbConfig.getString("db-name");
 		final String host = dbConfig.getString("db-host");

@@ -10,7 +10,7 @@ package com.mobile.restaurant.error;
  */
 public enum ApplicationErrorInfo {
 
-	SUCCESS(0,"Success"), NOT_FOUND(2,"File Not Found");
+	SUCCESS(0,"Success"), NOT_FOUND(2,"File Not Found"), INVALID_INPUT(2, "Invalid Input");
 
 	private int errorCode;
 	private String errorMessage;

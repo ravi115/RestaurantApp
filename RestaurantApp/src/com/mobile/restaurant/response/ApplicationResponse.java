@@ -3,7 +3,8 @@
  */
 package com.mobile.restaurant.response;
 
-import org.json.JSONArray;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 
@@ -15,5 +16,6 @@ public class ApplicationResponse {
 
 	public int id;
 	public String message;
-	public JSONArray result;
+	public List<Map<String,String>> restaurants;
+	
 }

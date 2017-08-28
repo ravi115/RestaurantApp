@@ -22,7 +22,8 @@ public abstract class GenericFileReader {
 	protected String queryTemplate;
 	
 	private String getCompleteFilePath() {
-		return String.format("%s\\%s", folderPath, fileName);
+		String pathName = String.format("%s\\%s", folderPath, fileName); 
+		return pathName;
 	}
 
 	public GenericFileReader() throws ApplicationException {
@@ -37,7 +38,7 @@ public abstract class GenericFileReader {
 	private String readQueryFile() throws ApplicationException {
 		
 		try {
-			final InputStream inputStream = getClass().getClassLoader().getResourceAsStream(getCompleteFilePath());
+			final InputStream inputStream = getClass().getResourceAsStream(getCompleteFilePath());
 			if (null == inputStream) {
 				throw new ApplicationException(ApplicationErrorInfo.NOT_FOUND.getErrorCode(),
 						ApplicationErrorInfo.NOT_FOUND.getErrorMessage());
