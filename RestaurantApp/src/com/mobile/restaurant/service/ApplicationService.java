@@ -32,8 +32,8 @@ public class ApplicationService {
 	private final Logger LOG = Logger.getLogger(getClass());
 
 	/**
-	 * This method's GET API uses @PathParam to read the requested input. if the
-	 * input in not null then invoke business logic with this input.
+	 * The GET API of this method uses @PathParam to read the requested input. if the
+	 * input in not null then get the result.
 	 * 
 	 * @param type
 	 *            menu type to search all restaurant details.
@@ -46,7 +46,7 @@ public class ApplicationService {
 
 		ApplicationResponse appResponse = new ApplicationResponse();
 		try {
-			LOG.info("Starting searching restaurant for menu type = " + type);
+			LOG.info("Started searching restaurants for menu type = " + type);
 			if (null == type || type.isEmpty()) {
 				LOG.debug("Invalid input " + type);
 				throw new ApplicationException(ApplicationErrorInfo.INVALID_INPUT.getErrorCode(),
@@ -66,8 +66,8 @@ public class ApplicationService {
 	}
 
 	/**
-	 * This method's GET API uses @QueryParam to read the requested input. if
-	 * the input in not null then invoke business logic with this input.
+	 * The GET API of this method uses @QueryParam to read the requested input. if
+	 * the input in not null then get the result.
 	 * 
 	 * @param type
 	 *            menu type to search all restaurant details.
@@ -79,7 +79,7 @@ public class ApplicationService {
 
 		ApplicationResponse appResponse = new ApplicationResponse();
 		try {
-			LOG.info("Starting searching restaurant for menu type = " + type);
+			LOG.info("Started searching restaurants for menu type = " + type);
 			if (null == type || type.isEmpty()) {
 				LOG.debug("Invalid input " + type);
 				throw new ApplicationException(ApplicationErrorInfo.INVALID_INPUT.getErrorCode(),
