@@ -4,10 +4,7 @@
 
 package com.mobile.restaurant.business;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
-
-import org.json.JSONException;
+import org.apache.log4j.Logger;
 
 import com.mobile.restaurant.database.DBClientImpl;
 import com.mobile.restaurant.exception.ApplicationException;
@@ -15,20 +12,33 @@ import com.mobile.restaurant.query.QueryReader;
 import com.mobile.restaurant.response.ApplicationResponse;
 
 /**
+ * This class is the central unit of this application. It is responsible to
+ * initialize Response of this application with desired result.
  * 
- * @author raviranjan
+ * @author ravi ranjan kumar
+ * @since 2017-08-28
  *
  */
 public class ApplicationBusiness {
+	// Logger variable
+	private final Logger LOG = Logger.getLogger(getClass());
 
-	public ApplicationResponse getResult(final String menuType)
-			throws ApplicationException, JSONException, SQLException {
-
+	/**
+	 * Method to initialize the Application Response with desired result.
+	 * 
+	 * @param menuType
+	 *            requested parameter.
+	 * @return result in the form of application response.
+	 * @throws ApplicationException
+	 *             throws any checked or unchecked exception while processing of
+	 *             application.
+	 */
+	public ApplicationResponse getResult(final String menuType) throws ApplicationException {
+		LOG.info("Inside business Logic.");
 		final String query = new QueryReader(menuType).readQuery();
-
-		ApplicationResponse appResponse = new ApplicationResponse();
+		LOG.info("Generated Query is :" + query);
+		final ApplicationResponse appResponse = new ApplicationResponse();
 		if (null != query && !query.isEmpty()) {
-			appResponse.restaurants = (null != appResponse.restaurants) ? appResponse.restaurants : new ArrayList<>();
 			appResponse.restaurants = new DBClientImpl().getQueryResult(query);
 		}
 

@@ -3,28 +3,30 @@
  */
 package com.mobile.restaurant.database;
 
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
-
-import org.json.JSONException;
 
 import com.mobile.restaurant.exception.ApplicationException;
 
 /**
+ * Interface provides functionality to execute query and process result to its
+ * implementing class.
  * 
- * @author raviranjan
+ * @author ravi ranjan kumar
+ * @since 2017-08-28
  *
  */
 public interface DBClient {
 
 	/**
+	 * Method to execute SQL query.
 	 * 
 	 * @param query
-	 * @return
+	 *            SQL query for the requested input.
+	 * @return collection of all query result.
 	 * @throws ApplicationException
-	 * @throws JSONException
-	 * @throws SQLException
+	 *             throws any checked or unchecked exception while executing the
+	 *             query..
 	 */
-	public List<Map<String,String>> getQueryResult(final String query) throws ApplicationException, JSONException, SQLException;
+	public List<Map<String, String>> getQueryResult(final String query) throws ApplicationException;
 }

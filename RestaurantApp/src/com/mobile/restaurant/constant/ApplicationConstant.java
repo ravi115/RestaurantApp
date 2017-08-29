@@ -4,8 +4,10 @@
 package com.mobile.restaurant.constant;
 
 /**
+ * This class provides all constant used in this application.
  * 
- * @author raviranjan
+ * @author ravi ranjan kumar
+ * @since 2017-08-28
  *
  */
 public class ApplicationConstant {
@@ -17,6 +19,8 @@ public class ApplicationConstant {
 	public final static String REPLACE_SPECIAL_CHARACTER = "[\\t\\n\\r]";
 	public final static String SPACE = "\\s";
 	public final static String PLACE_HOLDER = "$type";
-	//preventing to instantiation of this class.
-	private ApplicationConstant() {}
+
+	// prevent to instantiation of this class.
+	private ApplicationConstant() {
+	}
 }
