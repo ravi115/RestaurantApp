@@ -15,7 +15,7 @@ import com.mobile.restaurant.exception.ApplicationException;
  */
 public class QueryReader extends GenericFileReader {
 
-	private String menuType;
+	private String cuisineType;
 
 	/**
 	 * Constructor to call its abstract class and initialize the required
@@ -28,7 +28,7 @@ public class QueryReader extends GenericFileReader {
 	 */
 	public QueryReader(final String cuisineType) throws ApplicationException {
 		super();
-		this.menuType = cuisineType;
+		this.cuisineType = cuisineType;
 	}
 
 	/**
@@ -38,6 +38,6 @@ public class QueryReader extends GenericFileReader {
 	 */
 	@Override
 	public String readQuery() throws ApplicationException {
-		return queryTemplate.replace(ApplicationConstant.PLACE_HOLDER, menuType);
+		return queryTemplate.replace(ApplicationConstant.PLACE_HOLDER, cuisineType);
 	}
 }
