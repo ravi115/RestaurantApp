@@ -40,7 +40,7 @@ public class ApplicationTest {
 	public void testGetResults() {
 		try {
 			ApplicationService appService = new ApplicationService();
-			Response appResponse = appService.getResults("north india");
+			Response appResponse = appService.getResults("south indian");
 			JSONObject json = new JSONObject(appResponse);
 			int errorCode = json.getInt("errorCode");
 			String errorMessage = json.getString("errorMessage");
@@ -50,7 +50,7 @@ public class ApplicationTest {
 
 			JSONObject objJSON = (JSONObject) jsonArr.get(0);
 			assertEquals("india", objJSON.getString("country"));
-			assertEquals(400120, objJSON.getString("pincode"));
+			assertEquals(400001, objJSON.getString("pincode"));
 
 		} catch (Exception e) {
 		}
