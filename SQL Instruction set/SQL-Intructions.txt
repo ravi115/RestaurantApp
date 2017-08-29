@@ -1,4 +1,4 @@
-Follow below step to set database for this application.
+Follow below steps to populate data for this application.
 
 Step 1: create databse using below script.
 		create database restaurant;
