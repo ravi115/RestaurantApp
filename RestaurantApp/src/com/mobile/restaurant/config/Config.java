@@ -46,9 +46,9 @@ public class Config {
 	}
 
 	/**
-	 * 
+	 * Forms the complete Path in the form of { @literal rootelement.propertyname}
 	 * @param propertyName property which value has to be read .
-	 * @return complete path for 
+	 * @return complete path
 	 */
 	private String getCompleteElementName(final String propertyName) {
 		String completeName = propertyName;
@@ -58,10 +58,11 @@ public class Config {
 		return completeName;
 	}
 	/**
-	 * 
-	 * @param propertyName
-	 * @param key
-	 * @return
+	 * Forms the complete path in the form of 
+   	 * { @literal rootelement.propertyname[@keyName]}
+	 * @param propertyName property Name
+	 * @param key attribute Name
+	 * @return complete attribute Path.
 	 */
 	private String getCompleteAttributeName(final String propertyName, final String key) {
 		String completeName = defaultName;
@@ -73,28 +74,28 @@ public class Config {
 		return attributeName;
 	}
 	/**
-	 * 
-	 * @param name
-	 * @return
+	 * Read the value for queried proprety.
+	 * @param name key to read property value.
+	 * @return value represented by proertyName variable
 	 */
 	public String getString(final String name) {
 		String completeElementName = getCompleteElementName(name);
 		return config.getString(completeElementName);
 	}
 	/**
-	 * 
-	 * @param name
-	 * @return
+	 * Read the value for queried proprety.
+	 * @param name key to read property value.
+	 * @return value represented by proertyName variable
 	 */
 	public int getInteger(final String name) {
 		String completeElementName = getCompleteElementName(name);
 		return config.getInt(completeElementName);
 	}
 	/**
-	 * 
-	 * @param name
-	 * @param key
-	 * @return
+	 * Reads the attribute value from XML file.
+	 * @param name property name
+	 * @param key attribute which value has to be read.
+	 * @return attribute value.
 	 */
 	public String getAttributes(final String name, final String key) {
 		String attributeName = getCompleteAttributeName(name, key);
