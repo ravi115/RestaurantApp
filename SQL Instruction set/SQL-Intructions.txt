@@ -6,7 +6,7 @@ Step 1: create databse using below script.
 Step 2: select restaurant databse.
 			use restaurnat;
 		
-Step 3: Now create three table: - 1. restaurantinfo 2. address 3.mealtype using below script;
+Step 3: Now create three tables: - 1. restaurantinfo 2. address 3.mealtype using below script;
 
 			create table restaurantinfo (
 				id int not null primary key,
