@@ -26,16 +26,16 @@ public class ApplicationBusiness {
 	/**
 	 * Method to initialize the Application Response with desired result.
 	 * 
-	 * @param menuType
+	 * @param cuisineType
 	 *            requested parameter.
 	 * @return result in the form of application response.
 	 * @throws ApplicationException
 	 *             throws any checked or unchecked exception while processing of
 	 *             application.
 	 */
-	public ApplicationResponse getResult(final String menuType) throws ApplicationException {
+	public ApplicationResponse getResult(final String cuisineType) throws ApplicationException {
 		LOG.info("Inside business Logic.");
-		final String query = new QueryReader(menuType).readQuery();
+		final String query = new QueryReader(cuisineType).readQuery();
 		LOG.info("Generated Query is :" + query);
 		final ApplicationResponse appResponse = new ApplicationResponse();
 		if (null != query && !query.isEmpty()) {

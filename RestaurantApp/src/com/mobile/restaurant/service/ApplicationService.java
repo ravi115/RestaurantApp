@@ -25,7 +25,7 @@ import com.mobile.restaurant.response.ApplicationResponse;
  * @author ravi ranjan kumar
  * @since 2017-08-28
  */
-@Path("/menu")
+@Path("/cuisine")
 public class ApplicationService {
 
 	// Logger variable
@@ -46,7 +46,7 @@ public class ApplicationService {
 
 		ApplicationResponse appResponse = new ApplicationResponse();
 		try {
-			LOG.info("Started searching restaurants for menu type = " + type);
+			LOG.info("Started searching restaurants for cuisine type = " + type);
 			if (null == type || type.isEmpty()) {
 				LOG.debug("Invalid input " + type);
 				throw new ApplicationException(ApplicationErrorInfo.INVALID_INPUT.getErrorCode(),
@@ -79,7 +79,7 @@ public class ApplicationService {
 
 		ApplicationResponse appResponse = new ApplicationResponse();
 		try {
-			LOG.info("Started searching restaurants for menu type = " + type);
+			LOG.info("Started searching restaurants for cuisine type = " + type);
 			if (null == type || type.isEmpty()) {
 				LOG.debug("Invalid input " + type);
 				throw new ApplicationException(ApplicationErrorInfo.INVALID_INPUT.getErrorCode(),

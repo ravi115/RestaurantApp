@@ -21,14 +21,14 @@ public class QueryReader extends GenericFileReader {
 	 * Constructor to call its abstract class and initialize the required
 	 * property.
 	 * 
-	 * @param menuType
+	 * @param cuisineType
 	 *            requested parameter.
 	 * @throws ApplicationException
 	 *             throws checked and unchecked exception.
 	 */
-	public QueryReader(final String menuType) throws ApplicationException {
+	public QueryReader(final String cuisineType) throws ApplicationException {
 		super();
-		this.menuType = menuType;
+		this.menuType = cuisineType;
 	}
 
 	/**
