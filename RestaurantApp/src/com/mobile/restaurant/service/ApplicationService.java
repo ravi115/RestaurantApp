@@ -1,5 +1,6 @@
 /*
  * (c) copyright 2017. 
+ * This package provides the implementation of rest resource. 
  */
 package com.mobile.restaurant.service;
 
@@ -21,17 +22,18 @@ import com.mobile.restaurant.exception.ApplicationException;
 import com.mobile.restaurant.response.ApplicationResponse;
 
 /**
- * 
+ * This class implements GET rest API and provide search interface.
  * @author raviranjan
- *
+ * @since 2017-08-28
  */
 @Path("/menu")
 public class ApplicationService {
 
 	/**
-	 * 
-	 * @param type
-	 * @return
+	 * This method's GET API usese @PathParam to read the requested input.
+	 * if the input in not null then invoke business logic with this input.
+	 * @param type menu type to search all restaurant details.
+	 * @return list of restaurant details for that specified menu.
 	 */
 	@GET
 	@Path("/{type}")
@@ -56,9 +58,10 @@ public class ApplicationService {
 	}
 
 	/**
-	 * 
-	 * @param type
-	 * @return
+	 * This method's GET API usese @QueryParam to read the requested input.
+	 * if the input in not null then invoke business logic with this input.
+	 * @param type menu type to search all restaurant details.
+	 * @return list of restaurant details for that specified menu.
 	 */
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
