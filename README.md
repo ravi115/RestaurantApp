@@ -21,6 +21,6 @@ for example, if we search restaurant details for **_north indian cuisine_** then
 ```
 
   **These are below steps to configure database**. 
-  1. open MySQL command line s/w on your machine. if you don't have you cn download it form here. 
+  1. open MySQL command line on your machine. if you don't have then you can download it form here [click here](https://dev.mysql.com/downloads/installer/). 
   2. Look for **SQL-Intructions.txt** file here [click here](https://github.com/ravi115/RestaurantApp/tree/master/SQL%20Instruction%20set).
   3. follow the instructions. after completing all steps successfully you are ready with database.
