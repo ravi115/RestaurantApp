@@ -12,5 +12,13 @@ for example, if we search restaurant details for **_north indian cuisine_** then
 #### important Library Used.
 - mysql-connector-java- 6.0.5
 - commons-configuration2- 2.0
-- junit- 4.10
-- Jersey- 1.19
+- junit framwork- 4.10
+- Jersey framwork- 1.19
+
+#### instructions to run the application.
+_before running the application we have to configure the database on client's machine and populate some data_.
+
+  **These are below steps to configure database**. 
+  1. open MySQL command line s/w on your machine. if you don't have you cn download it form here. 
+  2. Look for **SQL-Intructions.txt** file here [click here](https://github.com/ravi115/RestaurantApp/tree/master/SQL%20Instruction%20set).
+  3. follow the instructions. after completing all steps successfully you are ready with database.
