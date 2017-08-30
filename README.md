@@ -29,11 +29,13 @@ for example, if we search restaurant details for **_north indian cuisine_** then
 ### To run this application follow any of these below steps.
  ##### step-1: 
  1. you can deploy this application on tomcat server directly using war file. [click here](https://github.com/ravi115/RestaurantApp/tree/master/war%20file) to get war file.
- 2. since this application exposes only GET API, you can test this application using any browser or postman.
+ 2. you change _database property_ in appConfig.xml file.
+ 3. since this application exposes only GET API, you can test this application using any browser or postman.
  
  ##### step-2 :
   1. you can clone this repository to your workspace and build this project as a _maven build_.
-  2. _test_ source folder provides junit test cases for this application.
+  2. you change _database property_ in appConfig.xml file.
+  3. _test_ source folder provides junit test cases for this application.
   
   ```diff
 -  use these below URI to search restaurant.
