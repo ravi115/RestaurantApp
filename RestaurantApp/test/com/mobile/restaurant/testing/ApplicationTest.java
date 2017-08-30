@@ -101,10 +101,12 @@ public class ApplicationTest {
 	@Test
 	public void testGetQuery() {
 		try {
-			final String sqlQuery = "select r.name, a.street, a.city,a.state, a.country, a.pincode, a.mobile\r\n"
-					+ "from restaurantinformation r join address a \r\n" + "on a.aid = r.id\r\n" + "where r.id in (\r\n"
-					+ "select tid from item where type=\"north india\");";
-			final QueryReader queryReader = new QueryReader("north india");
+			final String sqlQuery = "select r.name, a.street, a.city,a.state, a.country, a.pincode, a.mobile\r\n" + 
+					"from restaurantinfo r join address a \r\n" + 
+					"on a.aid = r.id\r\n" + 
+					"where r.id in (\r\n" + 
+					"select tid from mealtype where type=\"north indian\");";
+			final QueryReader queryReader = new QueryReader("north indian");
 			final String actualQuery = queryReader.readQuery();
 			assertEquals(sqlQuery, actualQuery);
 		} catch (ApplicationException e) {
