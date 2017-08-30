@@ -8,3 +8,9 @@ for example, if we search restaurant details for **_north indian cuisine_** then
 - Apache Tomcat Server-9.0 
 - MySQL database
 - Maven Project Managament- 4.0.0
+
+#### important Library Used.
+- mysql-connector-java- 6.0.5
+- commons-configuration2- 2.0
+- junit- 4.10
+- Jersey- 1.19
