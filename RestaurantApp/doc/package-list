@@ -1,0 +1,10 @@
+com.mobile.restaurant.business
+com.mobile.restaurant.config
+com.mobile.restaurant.constant
+com.mobile.restaurant.database
+com.mobile.restaurant.error
+com.mobile.restaurant.exception
+com.mobile.restaurant.query
+com.mobile.restaurant.response
+com.mobile.restaurant.service
+com.mobile.restaurant.testing
