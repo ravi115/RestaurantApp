@@ -24,17 +24,17 @@ for example, if we search restaurant details for **_north indian cuisine_** then
    2. [click here](https://github.com/ravi115/RestaurantApp/blob/master/SQL%20Instruction%20set/MySQL-Instruction.txt) if you need any details to open MySQL command line.
    3. Look for **InsertQuery.sql** file [click here](https://github.com/ravi115/RestaurantApp/blob/master/SQL%20Instruction%20set/InsertQuery.sql).
    4. copy the whole content (ctrl+A) and paste to MySQL cmd.
-   5. if you won't face any error in the above steps, then database configuration and populating of data is done successfully.
+   5. if we won't face any error in the above steps, then database configuration and populating of data is done successfully.
 
 ### To run this application follow any of these below steps.
  ##### step-1: 
- 1. you can deploy this application on tomcat server directly using war file. [click here](https://github.com/ravi115/RestaurantApp/tree/master/war%20file) to get war file.
- 2. you can change _database property_ in appConfig.xml file.
- 3. since this application exposes only GET API, you can test this application using any browser or postman.
+ 1. we can deploy this application on tomcat server directly using war file. [click here](https://github.com/ravi115/RestaurantApp/tree/master/war%20file) to get war file.
+ 2. we can change _database property_ in appConfig.xml file.
+ 3. since this application exposes only GET API, we can test this application using any browser or postman.
  
  ##### step-2 :
-  1. you can clone this repository to your workspace and build this project as a _maven build_.
-  2. you can change _database property_ in appConfig.xml file.
+  1. we can clone this repository to our workspace and build this project as a _maven build_.
+  2. we can change _database property_ in appConfig.xml file.
   3. _test_ source folder provides junit test cases for this application.
   
   ```diff
@@ -44,6 +44,6 @@ for example, if we search restaurant details for **_north indian cuisine_** then
   2. http://localhost:8080/RestaurantApp/restaurant/cuisine/south indian
 ```
  
-**search _doc folder_ to  get java document of this application**.
+**Note: - search _doc folder_ to  get java document of this application**.
 
-Thanks.
+========================================================= o End o ==================================================================
