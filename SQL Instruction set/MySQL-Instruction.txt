@@ -1,0 +1,12 @@
+1. open command prompt.
+
+2. go to your installation directory of MySQL. 
+	e.g. : C:\Program Files (x86)\MySQL\MySQL Server 5.6\bin
+
+3. if username and password is set then use below command.
+	mysql -u root -p
+	-once you press enter it will ask to 
+	Enter password:${enter your password}
+	- in case your username is not root then use 	mysql -u {@username} -p.
+
+4. now MySQL is ready to use.
