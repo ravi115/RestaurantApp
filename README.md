@@ -16,7 +16,9 @@ for example, if we search restaurant details for **_north indian cuisine_** then
 - Jersey framwork- 1.19
 
 #### instructions to run the application.
-_before running the application we have to configure the database on client's machine and populate some data_.
+```diff
++ _before running the application we have to configure the database on client's machine and populate some data_.
+```
 
   **These are below steps to configure database**. 
   1. open MySQL command line s/w on your machine. if you don't have you cn download it form here. 
