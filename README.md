@@ -16,8 +16,8 @@ for example, if we search restaurant details for **_north indian cuisine_** then
 - Jersey framwork- 1.19
 
 #### instructions to run the application.
-_```diff
-+ before running the application we have to configure the database on client's machine and populate some data.
+```diff
++before running the application we have to configure the database on client's machine and populate some data.
 ```
 
   **These are below steps to configure database**. 
