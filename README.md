@@ -1,7 +1,7 @@
 # RestaurantApp
 This application exposes the **GET API** of Restful web services and provides **_search interface_**.
 In this application we will be searching **restaurant details** such as *location, restaurant name, phone number etc* based on our **_cuisine choice_**.
-for example, if we search restaurant details for **_north indian cuisine_** then this application should give us **list of restaurant**.
+for example, if we search restaurant details for **_north indian cuisine_** then this application should give us **list of restaurants**.
 
 ### Building environment of this application.
 - Eclipse IDE (Oxygen beta version)
